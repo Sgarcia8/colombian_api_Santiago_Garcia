@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: colombian_apiSG
+    ports:
+      - "80:80"
+    volumes:
+      - ./config/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
