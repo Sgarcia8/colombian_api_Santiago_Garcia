@@ -10,9 +10,15 @@ Breve descripción de tu proyecto. Explica de qué trata y qué problema resuelv
 
 ## Descripción
 
-Proyecto react modularizado por coponentes para el consumo del api proporcionada por [api-colombia](https://api-colombia.com/)
+Este proyecto es una aplicación desarrollada en React que utiliza una API web [api-colombia](https://api-colombia.com/) para extraer y presentar información específica sobre Colombia. La aplicación proporciona detalles sobre:
 
-Aquí proporciona una descripción detallada del proyecto, sus objetivos y cualquier detalle relevante.
+Presidentes de Colombia: Información sobre su partido politico y cuantos fueron electos del mismo.
+Aeropuertos: Datos detallados sobre los principales aeropuertos colombianos, incluyendo ubicación y características.
+Atracciones Turísticas: Información sobre los lugares turísticos su ubicación y la cantidad de estos por departamento, ayudando a los usuarios a explorar las maravillas de Colombia.
+La aplicación organiza esta información en una interfaz amigable y fácil de usar, permitiendo a los usuarios acceder a datos relevantes de manera eficiente.
+
+
+Se centra en la extracción 
 
 ## Tecnologías
 
