@@ -69,26 +69,29 @@ function ColombianTuristicAttraction() {
                 </div>
                 <div className='grid-item item3'>
                     {Object.keys(turisticAttraction).length > 0 && (
-                        <table className='contentTableA'>
-                            <thead>
-                                <tr>
-                                    <th>Departamento</th>
-                                    <th>Ciudad</th>
-                                    <th>Cantidad de Atractivos Turísticos</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {Object.keys(turisticAttraction).map((nameDepartement) => (
-                                    Object.entries(turisticAttraction[nameDepartement]).map(([nameCity, count]) => (
-                                        <tr key={`${nameDepartement}-${nameCity}`}>
-                                            <td>{nameDepartement}</td>
-                                            <td>{nameCity}</td>
-                                            <td>{count}</td>
-                                        </tr>
-                                    ))
-                                ))}
-                            </tbody>
-                        </table>
+                        <div>
+                            <h3>Group by department and city</h3>
+                            <table className='contentTableA'>
+                                <thead>
+                                    <tr>
+                                        <th>Departamento</th>
+                                        <th>Ciudad</th>
+                                        <th>Cantidad de Atractivos Turísticos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {Object.keys(turisticAttraction).map((nameDepartement) => (
+                                        Object.entries(turisticAttraction[nameDepartement]).map(([nameCity, count]) => (
+                                            <tr key={`${nameDepartement}-${nameCity}`}>
+                                                <td>{nameDepartement}</td>
+                                                <td>{nameCity}</td>
+                                                <td>{count}</td>
+                                            </tr>
+                                        ))
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     )}
                 </div>
             </div>

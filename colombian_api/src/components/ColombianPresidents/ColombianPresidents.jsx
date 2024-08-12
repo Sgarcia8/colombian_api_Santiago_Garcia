@@ -46,7 +46,7 @@ function ColombianPresidents() {
             <h1>Presidentes por Partido Político</h1>
             <div className='containerPresidents'>
                 <div className='grid-item item1'>
-                <CountEntities obj={infoPresident} />
+                    <CountEntities obj={infoPresident} />
                 </div>
                 <div className='grid-item item2'>
                     <h2>Registros</h2>
@@ -54,26 +54,29 @@ function ColombianPresidents() {
                 </div>
                 <div className='grid-item item3'>
                     {Object.keys(president).length > 0 && (
-                        <table className='contentTable'>
-                            <thead>
-                                <tr>
-                                    <th>Partido Político</th>
-                                    <th>Cantidad de Presidentes</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {Object.entries(president).map(([politicalParty, count]) => (
-                                    <tr key={politicalParty}>
-                                        <td>{politicalParty}</td>
-                                        <td>{count}</td>
+                        <div>
+                            <h3>Group by political party</h3>
+                            <table className='contentTable'>
+                                <thead>
+                                    <tr>
+                                        <th>Partido Político</th>
+                                        <th>Cantidad de Presidentes</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    {Object.entries(president).map(([politicalParty, count]) => (
+                                        <tr key={politicalParty}>
+                                            <td>{politicalParty}</td>
+                                            <td>{count}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     )}
                 </div>
                 <div className='grid-item item4'>
-                <ResponseTime time={responseTime}/>
+                    <ResponseTime time={responseTime} />
                 </div>
             </div>
         </div>

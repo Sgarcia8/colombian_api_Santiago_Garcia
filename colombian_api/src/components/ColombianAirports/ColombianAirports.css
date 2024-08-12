@@ -35,37 +35,68 @@
     grid-column: 2;
     grid-row: span 3;
 }
+
 /* Este ítem ocupará la tercera columna */
 .item4 {
     grid-column: 1;
     grid-row: 3;
 }
-.item5{
+
+.item5 {
     grid-column: span 2;
     grid-row: 4;
     flex-direction: column;
 }
-.item6{
+
+.item6 {
     max-height: 520px;
     text-align: left;
     overflow-y: auto;
-    display: block; /* Asegura que el contenedor sea un bloque */
+    display: block;
+    /* Asegura que el contenedor sea un bloque */
 
 }
-.item7{
+
+.item7 {
     grid-column: span 2;
     grid-row: 5;
 
 }
+
 .contentTableAir {
-    height: 520px; /* Asegura que la tabla ocupe el 100% del alto del contenedor */
-    max-height: 520px; /* Establece la altura máxima */
-    overflow-y: auto; /* Añade scroll si es necesario */
-    border: 1px solid #ddd; /* Agrega un borde alrededor del contenedor */
-    display: block; /* Asegura que el contenedor sea un bloque */
+    height: 520px;
+    /* Asegura que la tabla ocupe el 100% del alto del contenedor */
+    max-height: 520px;
+    /* Establece la altura máxima */
+    overflow-y: auto;
+    /* Añade scroll si es necesario */
+    border: 1px solid #ddd;
+    /* Agrega un borde alrededor del contenedor */
+    display: block;
+    /* Asegura que el contenedor sea un bloque */
 }
 
 th,
 td {
     border: solid 2px purple;
+}
+
+.button_slide {
+    color: #000;
+    border: 2px solid purple;
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 purple;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.slide_left:hover {
+    box-shadow: inset 0 0 0 50px purple;
 }

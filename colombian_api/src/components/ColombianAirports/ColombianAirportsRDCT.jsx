@@ -38,44 +38,61 @@ function ColombianAirportsRDCT() {
         fetchAndGroupData();
     }, [])
 
+
+    // Función para descargar el archivo JSON
+    const downloadJSON = () => {
+        const blob = new Blob([JSON.stringify(airport, null, 5)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'airport_info.json';
+        a.click();
+        URL.revokeObjectURL(url); // Limpiar el URL después de la descarga
+    };
+
     return (
         <div>
             <h1>Airports Information</h1>
             <div className='containerAirports'>
                 <div className='grid-item item1'>
                     {airportInfo.length > 0 && (
-                        <table className='contentTableAir'>
-                            <thead>
-                                <tr>
-                                    <th>Región</th>
-                                    <th>Departamento</th>
-                                    <th>Ciudad</th>
-                                    <th>Tipo</th>
-                                    <th>Cantidad</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {Object.keys(airport).map((regionName) => (
-                                    Object.entries(airport[regionName]).map(([departmentName, cities]) => (
-                                        Object.entries(cities).map(([cityName, types]) => (
-                                            Object.entries(types).map(([typeName, count]) => (
-                                                <tr key={`${regionName}-${departmentName}-${cityName}-${typeName}`}>
-                                                    <td>{regionName}</td>
-                                                    <td>{departmentName}</td>
-                                                    <td>{cityName}</td>
-                                                    <td>{typeName}</td>
-                                                    <td>{count}</td>
-                                                </tr>
+                        <div>
+                            <h3>Group by region, department, city and type</h3>
+                            <table className='contentTableAir'>
+                                <thead>
+                                    <tr>
+                                        <th>Región</th>
+                                        <th>Departamento</th>
+                                        <th>Ciudad</th>
+                                        <th>Tipo</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {Object.keys(airport).map((regionName) => (
+                                        Object.entries(airport[regionName]).map(([departmentName, cities]) => (
+                                            Object.entries(cities).map(([cityName, types]) => (
+                                                Object.entries(types).map(([typeName, count]) => (
+                                                    <tr key={`${regionName}-${departmentName}-${cityName}-${typeName}`}>
+                                                        <td>{regionName}</td>
+                                                        <td>{departmentName}</td>
+                                                        <td>{cityName}</td>
+                                                        <td>{typeName}</td>
+                                                        <td>{count}</td>
+                                                    </tr>
+                                                ))
                                             ))
                                         ))
-                                    ))
-                                ))}
-                            </tbody>
-                        </table>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     )}
                 </div>
                 <div className='grid-item item6'>
+                    <button onClick={downloadJSON} className='button_slide slide_left'>Download JSON</button>
                     <pre>{JSON.stringify(airport, null, 5)}</pre>
+                    <button onClick={downloadJSON} className='button_slide slide_left'>Download JSON</button>
                 </div>
                 <div className='grid-item item7'>
                     <ResponseTime time={responseTime} />

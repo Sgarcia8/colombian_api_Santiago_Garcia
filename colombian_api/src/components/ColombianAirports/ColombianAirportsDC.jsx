@@ -56,26 +56,29 @@ function ColombianAirportsDC() {
                 </div>
                 <div className='grid-item item3'>
                     {airportInfo.length > 0 && (
-                        <table className='contentTableAir'>
-                            <thead>
-                                <tr>
-                                    <th>Departamento</th>
-                                    <th>Ciudad</th>
-                                    <th>Cantidad de Aeropuertos</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {Object.keys(airport).map((departmentName) => (
-                                    Object.entries(airport[departmentName]).map(([cityName, count]) => (
-                                        <tr key={`${departmentName}-${cityName}`}>
-                                            <td>{departmentName}</td>
-                                            <td>{cityName}</td>
-                                            <td>{count}</td>
-                                        </tr>
-                                    ))
-                                ))}
-                            </tbody>
-                        </table>
+                        <div>
+                            <h3>Group by department and city</h3>
+                            <table className='contentTableAir'>
+                                <thead>
+                                    <tr>
+                                        <th>Departamento</th>
+                                        <th>Ciudad</th>
+                                        <th>Cantidad de Aeropuertos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {Object.keys(airport).map((departmentName) => (
+                                        Object.entries(airport[departmentName]).map(([cityName, count]) => (
+                                            <tr key={`${departmentName}-${cityName}`}>
+                                                <td>{departmentName}</td>
+                                                <td>{cityName}</td>
+                                                <td>{count}</td>
+                                            </tr>
+                                        ))
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     )}
                 </div>
                 <div className='grid-item item4'>
