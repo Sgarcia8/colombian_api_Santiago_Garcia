@@ -2,6 +2,9 @@ import { styled } from 'styled-components';
 import { useState } from 'react'
 import { Bs1Circle, Bs2Circle, Bs3Circle } from "react-icons/bs";
 import './Tabs.css';
+import ColombianPresidents from '../ColombianPresidents/ColombianPresidents';
+import ColombianTuristicAttraction from '../ColombianTuristicAttraction/ColombianTuristicAttraction';
+import ColombianAirportsDC from '../ColombianAirports/ColombianAirportsDC';
 
 
 export function Tabs() {
@@ -26,9 +29,9 @@ export function Tabs() {
                 <span className='indicator'></span>
             </ul>
             <div className='tab-content'>
-                {activeTab === -1 && <h1>Tab 1</h1>}
-                {activeTab === 0 && <h1>Tab 2</h1>}
-                {activeTab === 1 && <h1>Tab 3</h1>}
+                {activeTab === -1 && <h1><ColombianPresidents/></h1>}
+                {activeTab === 0 && <h1><ColombianTuristicAttraction/></h1>}
+                {activeTab === 1 && <h1><ColombianAirportsDC/></h1>}
             </div>
         </Container>
     );

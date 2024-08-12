@@ -1,12 +1,20 @@
 import './App.css';
-import ColombianPresidents from './components/ColombianPresidents/ColombianPresidents.jsx';
 import { Tabs } from './components/Tabs/Tabs.jsx';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Tabs/>
+      <Router>
+        <Routes>
+          {/* Redireccionar desde la raíz a otra ruta */}
+          <Route path='/' element={<Navigate to="/colombia_dash" />} />
+          {/* Definir las rutas */}
+          <Route path='/colombia_dash' element={<div><Tabs /></div>} />
+        </Routes>
+      </Router>
     </div>
+
   );
 }
 

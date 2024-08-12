@@ -1,4 +1,4 @@
-.containerPresidents {
+.containerAirports {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* 3 columnas iguales */
@@ -40,11 +40,29 @@
     grid-column: 1;
     grid-row: 3;
 }
+.item5{
+    grid-column: span 2;
+    grid-row: 4;
+    flex-direction: column;
+}
+.item6{
+    max-height: 520px;
+    text-align: left;
+    overflow-y: auto;
+    display: block; /* Asegura que el contenedor sea un bloque */
 
-.contentTable {
-    margin: 20px;
-    border: solid 5px purple;
-    border-radius: 10px;
+}
+.item7{
+    grid-column: span 2;
+    grid-row: 5;
+
+}
+.contentTableAir {
+    height: 520px; /* Asegura que la tabla ocupe el 100% del alto del contenedor */
+    max-height: 520px; /* Establece la altura máxima */
+    overflow-y: auto; /* Añade scroll si es necesario */
+    border: 1px solid #ddd; /* Agrega un borde alrededor del contenedor */
+    display: block; /* Asegura que el contenedor sea un bloque */
 }
 
 th,

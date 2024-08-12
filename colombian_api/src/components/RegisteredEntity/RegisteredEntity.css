@@ -1,0 +1,50 @@
+.containerEntity{
+    width: 100%;
+}
+
+.registerTable {
+    height: 500px; /* Establece una altura fija */
+    max-height: 500px; /* Establece la altura máxima */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    border: 1px solid #ddd; /* Agrega un borde alrededor del contenedor */
+    display: block; /* Asegura que el contenedor sea un bloque */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 55%; 
+    word-wrap: break-word; /* Asegura que el contenido de la celda se ajuste dentro del ancho */
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: purple;
+    z-index: 1; /* Asegura que el encabezado esté por encima del contenido de la tabla */
+    border: 1px solid purple; /* Vuelve a definir el borde para asegurarte de que se muestre */
+}
+
+/* Ajusta el ancho de las columnas */
+.thEntity:first-child,
+.tdEntity:first-child {
+    width: 10px; /* Esta columna tendrá un tamaño fijo */
+}
+
+.thEntity:last-child,
+.tdEntity:last-child {
+    width: 100%; /* Esta columna crecerá para ocupar el espacio restante */
+    word-wrap: break-word; /* Asegura que el contenido se ajuste dentro del ancho */
+}
