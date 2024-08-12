@@ -18,8 +18,6 @@ Atracciones Turísticas: Información sobre los lugares turísticos su ubicació
 La aplicación organiza esta información en una interfaz amigable y fácil de usar, permitiendo a los usuarios acceder a datos relevantes de manera eficiente.
 
 
-Se centra en la extracción 
-
 ## Tecnologías
 
 Lista las tecnologías y herramientas utilizadas en el proyecto:
