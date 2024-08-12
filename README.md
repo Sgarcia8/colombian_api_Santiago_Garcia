@@ -7,22 +7,22 @@ Breve descripción de tu proyecto. Explica de qué trata y qué problema resuelv
 - [Tecnologías](#tecnologías)
 - [Instalación](#instalación)
 - [Uso](#uso)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
 
 ## Descripción
+
+Proyecto react modularizado por coponentes para el consumo del api proporcionada por [api-colombia](https://api-colombia.com/)
 
 Aquí proporciona una descripción detallada del proyecto, sus objetivos y cualquier detalle relevante.
 
 ## Tecnologías
 
-Lista las tecnologías y herramientas utilizadas en el proyecto. Por ejemplo:
+Lista las tecnologías y herramientas utilizadas en el proyecto:
 
-- **React**: Para construir la interfaz de usuario.
-- **Node.js**: Para el servidor backend.
-- **Express**: Framework para el servidor.
-- **MongoDB**: Base de datos.
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **JavaScript**: Lenguaje de programación principal.
+- **JSX**: Sintaxis de extensión para JavaScript utilizada con React.
 - **Docker**: Para la contenedorización del entorno.
+- **API Web**: Para consumir datos desde una API externa.
 
 ## Instalación
 
@@ -58,5 +58,3 @@ Una vez que los contenedores estén en funcionamiento, puedes interactuar con la
 
 1. **Accede a la interfaz**: Ve a `http://localhost:80` para usar la aplicación.
 
-
-## Descripción
